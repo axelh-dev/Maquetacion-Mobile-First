@@ -148,6 +148,7 @@ main{
     line-height: 2.3rem;
     color: var(--bitcoin-orange);
 }
+
 .currency--table-container{
     width: 90%;
     min-width: 230px;
@@ -360,17 +361,32 @@ main{
     line-height: 1.8rem;
     color: #757575;
 }
+.plans-container--slider{
+    display: flex;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
 .plans-container--card{
     position: relative;
+    scroll-snap-align: center;
     width: 70%;
-    min-width: 230px;
+    min-width: 190px;
     max-width: 300px;
     height: 250px;
-    margin: 50px auto 0;
+    margin: 50px 5px 0;
     padding: 0 15px;
     border-radius: 15px;
     background: rgb(255, 255, 255);
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.plans-container--slider::-webkit-scrollbar {
+    background-color: var(--soft-orange);
+    height: 3px;
+}
+.plans-container--slider::-webkit-scrollbar-thumb {
+    background-color: var(--bitcoin-orange);
 }
 .recomendado{
     position: absolute;
@@ -452,3 +468,28 @@ outline: none;
     background-image: url('/assets/icons/orange-right-arrow.svg');
     vertical-align: text-bottom;
 }   
+footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);    
+}
+footer section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-left ul{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    list-style: none;
+}
+.footer-left li {
+    margin: 10px 0;
+}
+.footer-left a {
+    text-decoration: none;
+    color: var(--just-white);
+}
